@@ -1,0 +1,15 @@
+{
+    "name": "singleton_design_pattern/christophe",
+    "description": "The Sigleton design pattern with PHP",
+    "require-dev": {
+    },
+    "require": {
+        "phpunit/phpunit": "7.1"
+    },
+    "autoload": {
+        "psr-4" : {
+			"DesignPattern\\Singleton\\" : "src/Sigleton/",
+			"DesignPattern\\Observer\\" : "src/Observer/"
+		}
+    }
+}
