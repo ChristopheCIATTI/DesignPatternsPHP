@@ -1,8 +1,18 @@
 <?php
 
-namespace DesignPattern\Observer;
+namespace Observer;
 
+
+/**
+ * 
+ * @author Christophe
+ *
+ */
 abstract class AbstractObserver
 {
-    abstract function update(AbstractSubject $subject_in);
+    /**
+     * 
+     * @param unknown $subject_in
+     */
+    abstract function update($subject_in);
 }
