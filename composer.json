@@ -1,0 +1,20 @@
+{
+    "name": "christophe/design-pattern-php",
+    "description": "Desing pattern in php with explain",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopphe CIATTI",
+            "email": "christophe.ciatti@hotmail.com"
+        }
+    ],
+    "require": {},
+	"autoload": {
+        "psr-4" : {
+			"DesignPattern\\Singleton\\" : "src/Sigleton/",
+			"DesignPattern\\Observer\\" : "src/Observer/"
+		}
+    }
+}
+
+
