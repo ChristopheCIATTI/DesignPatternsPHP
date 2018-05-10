@@ -1,7 +1,12 @@
 <?php
  
 namespace DesignPattern\CreationalPatterns\Singleton;
-    
+
+/**
+ * 
+ * @author Christophe
+ *
+ */
 class Singleton {
  
   /**
@@ -23,11 +28,12 @@ class Singleton {
     * @param void
     * @return Singleton
     */
-   public static function getInstance() {
-     if(is_null(self::$_instance)) {
+   public static function getInstance()
+   {
+     if(is_null(self::$_instance))
+     {
        self::$_instance = new Singleton();  
      }
- 
      return self::$_instance;
    }
 }
