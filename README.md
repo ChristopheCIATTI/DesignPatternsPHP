@@ -1,4 +1,4 @@
-# Design Pattern PHP
+# Design Patterns PHP
 
 This is a repository whith Design pattern in php,
 with explanation.
