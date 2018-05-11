@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" colors="true" verbose="true">
+    <testsuite name="DesignPatternPHPTest">
+        <directory>
+			./tests
+		</directory>
+    </testsuite>
+    <filter>
+        <whitelist proceessUncoveredFromWhitelist="true">
+            <directory suffic=".php">src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
