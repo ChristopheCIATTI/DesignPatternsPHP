@@ -29,18 +29,18 @@ class ClientSingleton extends Singleton
          * 
          * @var \DesignPattern\CreationalPatterns\Singleton\Singleton $SingletonA
          */
-        $SingletonA = Singleton::getInstance();
+        $singletonA = Singleton::getInstance();
         
         /**
          * 
          * @var \DesignPattern\CreationalPatterns\Singleton\Singleton $SingletonB
          */
-        $SingletonB = Singleton::getInstance();
+        $singletonB = Singleton::getInstance();
         
-        var_dump($SingletonA);
+        var_dump($singletonA);
         echo "<br/>";
         
-        var_dump($SingletonB);
+        var_dump($singletonB);
         echo "<br/>";
     }
 }
