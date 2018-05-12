@@ -47,7 +47,7 @@ class ConcretePrototypeA extends AbstractPrototype
     /**
      * 
      * {@inheritDoc}
-     * @see AbstractPrototype::__clone()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::__clone()
      */
     public function __clone()
     {

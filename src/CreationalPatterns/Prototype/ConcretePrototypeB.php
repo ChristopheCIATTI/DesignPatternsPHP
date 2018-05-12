@@ -18,31 +18,30 @@ class ConcretePrototypeB extends AbstractPrototype
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\Prototype\AbstractPrototype::setPlaceOfBirth()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::setPlaceOfBirth()
      */
-    public function setPlaceOfBirth($placeOfBirth)
+    public function setPlaceOfBirth($placeOfbirth)
     {
         /**
          * 
-         * @var \DesignPattern\Prototype\ConcretePrototypeB $placeOfBirth
          */
-        $this->placeOfBirth = $placeOfBirth;
+        $this->placeOfbirth = $placeOfbirth;
     }
     
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\Prototype\AbstractPrototype::getPlaceOfBirth()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::getPlaceOfBirth()
      */
     public function getPlaceOfBirth()
     {
-        return $placeOfBirth;
+        return $this->placeOfbirth;
     } 
     
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\Prototype\AbstractPrototype::__clone()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::__clone()
      */
     function __clone()
     {} 

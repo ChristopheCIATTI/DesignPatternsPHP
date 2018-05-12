@@ -66,7 +66,7 @@ abstract class AbstractPrototype
      * 
      * @param unknown $id
      */
-    public function setId($id)
+    public function setId(Int $id)
     {
         /**
          * 
