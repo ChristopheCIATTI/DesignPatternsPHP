@@ -16,10 +16,11 @@ class ClientBuilder
     public function __construct()
     {
         $this->productBuilder = new ConcreteBuilder();
-        $this->productDirector = new Director($productBuilder);
+        $this->productDirector = new Director($this->productBuilder);
         $this->productDirector->build();
-        $produc = $this->productDirector->getProduct();
+        $this->productDirector->getProduct();
         
-        var_dump($produc);
+        var_dump($this->productDirector->getProduct());
+     
     }
 }

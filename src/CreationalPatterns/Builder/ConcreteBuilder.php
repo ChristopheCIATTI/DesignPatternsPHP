@@ -13,6 +13,8 @@
 
 namespace DesignPattern\CreationalPatterns\Builder;
 
+use DesignPattern;
+
 /**
  * 
  * @author Christophe
@@ -25,6 +27,18 @@ class ConcreteBuilder extends AbstractBuilder {
      * @var unknown
      */
     private $product;
+    
+    
+    function __construct()
+    {
+        /**
+         *
+         * @var \DesignPattern\CreationalPatterns\Builder\ConcreteBuilder $product
+         */
+        $this->product = new Product();
+        var_dump($this->product);
+    }
+    
     
     
     
@@ -46,15 +60,6 @@ class ConcreteBuilder extends AbstractBuilder {
     public function addSubProductB()
     {
         $this->product->setPart("Here this the subProduct B", new SubProductB());
-    }
-    
-    function __construct()
-    {
-        /**
-         *
-         * @var \DesignPattern\CreationalPatterns\Builder\ConcreteBuilder $product
-         */
-        $this->product = new Product();
     }
     
     /**

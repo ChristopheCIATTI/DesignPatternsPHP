@@ -38,15 +38,4 @@ class Director extends AbstractDirector
     {
         return $this->builder->getProduct();
     }
-    
-//     public function build(InterfaceBuilder $builder)  //: AbstractProduct
-//     {
-//         $builder->createProduct();
-        
-//         $builder->addSubProductA();
-        
-//         $builder->addSubProductB();
-        
-//         //return $builder->getProduct();
-//     }
 }
