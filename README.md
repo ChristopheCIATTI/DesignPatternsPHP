@@ -7,8 +7,9 @@ with explanation.
 
 - *Abstract Factory pattern*
 - *Builder pattern*
-- *Singleton pattern*
+- *Factory Method pattern*
 - *Prototype pattern*
+- *Singleton pattern*
 
 ## Avancement :
 This pattern is only minimal version.
