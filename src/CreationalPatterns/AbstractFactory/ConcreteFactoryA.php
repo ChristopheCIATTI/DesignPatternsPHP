@@ -22,7 +22,7 @@ class ConcreteFactoryA extends AbstractFactory
          */
         $this->product = new ProductAa();
         
-        return $this->product ;
+        return $this->product;
     }
     
     /**
