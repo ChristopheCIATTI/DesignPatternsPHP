@@ -8,13 +8,18 @@
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;
 
+/**
+ * 
+ * @author Christophe
+ *
+ */
 class ProductAb extends AbstractProductA
 {
     /**
      * 
      * @var unknown
      */
-    private $product;
+    private $_product = null;
     
     public function __construct()
     {
@@ -22,7 +27,7 @@ class ProductAb extends AbstractProductA
          * 
          * @var \DesignPattern\CreationalPatterns\AbstractFactory\ProductAb $product
          */
-        $this->product= "Product Ab";
+        $this->_product = "Product Ab";
     }
 
     /**
@@ -30,9 +35,9 @@ class ProductAb extends AbstractProductA
      * {@inheritDoc}
      * @see \DesignPattern\CreationalPatterns\AbstractFactory\AbstractProductA::getProduct()
      */
-    public function getProduct()
+    public function getProduct() : string
     {
-        return $this->product;
+        return $this->_product;
     }
 
     

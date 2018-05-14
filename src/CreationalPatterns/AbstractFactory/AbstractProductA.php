@@ -16,5 +16,5 @@ namespace DesignPattern\CreationalPatterns\AbstractFactory;
 abstract class AbstractProductA
 {
     abstract function __construct();
-    abstract function getProduct();
+    abstract function getProduct() : string ;
 }

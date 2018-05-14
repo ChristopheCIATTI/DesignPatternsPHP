@@ -19,15 +19,19 @@ class ProductBa extends AbstractProductB
      * 
      * @var unknown
      */
-    private $product;
+    private $_product = null;
     
+    /**
+     * 
+     * @param unknown $_product
+     */
     public function __construct()
     {
         /**
          * 
          * @var \DesignPattern\CreationalPatterns\AbstractFactory\ProductBa $product
          */
-        $this->product= "Product Ba";
+        $this->_product= "Product Ba";
     }
 
     /**
@@ -35,9 +39,9 @@ class ProductBa extends AbstractProductB
      * {@inheritDoc}
      * @see \DesignPattern\CreationalPatterns\AbstractFactory\AbstractProductB::getProduct()
      */
-    public function getProduct()
+    public function getProduct() : string
     {
-        return $this->product;
+        return $this->_product;
     }
 
     

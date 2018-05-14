@@ -16,13 +16,7 @@ class ConcreteFactoryA extends AbstractFactory
      */
     public function createProductA()
     {
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\AbstractFactory\ConcreteFactoryA $product
-         */
-        $this->product = new ProductAa();
-        
-        return $this->product;
+        return new ProductAa();
     }
     
     /**
@@ -32,12 +26,7 @@ class ConcreteFactoryA extends AbstractFactory
      */
     public function createProductB()
     {
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\AbstractFactory\ConcreteFactoryA $product
-         */
-        $this->product = new ProductAb();
-        return $this->product ;
+        return new ProductAb();
     }
 
     

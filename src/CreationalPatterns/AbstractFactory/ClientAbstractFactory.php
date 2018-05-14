@@ -8,7 +8,7 @@ namespace DesignPattern\CreationalPatterns\AbstractFactory;
  *
  */
 class ClientAbstractFactory
-{
+{ 
     /**
      * 
      * @var unknown
@@ -22,32 +22,43 @@ class ClientAbstractFactory
     
     public function __construct()
     {
+        self::makeProduct(new ConcreteFactoryA());
+        self::makeProduct(new ConcreteFactoryB());
+     }
+     
+     /**
+      * 
+      * @param AbstractFactory $factory
+      */
+    private function makeProduct(AbstractFactory $factory)
+    {
         /**
          * 
          * @var \DesignPattern\CreationalPatterns\AbstractFactory\ClientAbstractFactory $ConcreteProductA
          */
-        $this->ConcreteProductA = new ConcreteFactoryA();
-        
-        $this->ConcreteProductA->createProductA();
-        $this->ConcreteProductA->createProductB();
-        
-        var_dump($this->ConcreteProductA->createProductA());
-        echo "<br/>";
-        var_dump($this->ConcreteProductA->createProductB());
-        
-        echo "<br/>";
-        echo "<br/>";
+        $this->ConcreteProductA = $factory->createProductA();
         
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\AbstractFactory\ClientAbstractFactory $ConcreteProductB
+         * @var Ambiguous $ConcreteProductB
          */
-        $this->ConcreteProductB = new ConcreteFactoryB();
-        $this->ConcreteProductB->createProductA();
-        $this->ConcreteProductB->createProductB();
+        $this->ConcreteProductB = $factory->createProductB();
         
-        var_dump($this->ConcreteProductB->createProductA());
-        echo "<br/>";
-        var_dump($this->ConcreteProductB->createProductB());
+        $this->showProduct( $this->ConcreteProductA->getProduct(), $this->ConcreteProductB->getProduct());
     }
+    
+    /**
+     * 
+     * @param unknown $ConcreteProductA
+     * @param unknown $ConcreteProductB
+     */
+    private function showProduct($ConcreteProductA, $ConcreteProductB)
+    {
+        echo "<pre>";
+        echo "show product" . "<br/>";
+        echo "product name : " . $ConcreteProductA . "<br/>";
+        echo "product name : " . $ConcreteProductB . "<br/>";
+        echo "</pre>";
+    }
+    
 }
