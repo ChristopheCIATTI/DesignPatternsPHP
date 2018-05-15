@@ -1,11 +1,5 @@
 <?php
 
-/*
- * This the Client script.
- * The role of this script is to execute the follow pattern.
- * The script use the contrete prototype A and B
- */
-
 namespace DesignPattern\CreationalPatterns\Prototype;
 
 /**
@@ -27,99 +21,48 @@ class ClientPrototype
      */
     private $ConcretePrototypeB;
     
-    /**
-     * This is a constructor, the constructor initialize the variable class
-     */
     public function __construct()
     {
+        $this->makeProduct();
         /**
-         * Call makePeople methods
+         * 
+         * @var Ambiguous $productA
          */
-        $this->makePeople();
-        
-        /**
-         * Clone the variable ConcretePrototypeA in an variable $Me 
-         * @var Ambiguous $Me
-         */
-        $Me = clone $this->ConcretePrototypeA;
-        
-        /*
-         * Call the setPepole methods
-         */
-        $this->setPeople($Me, "MyName", "00", "1994", "MyPlaceOfBirth");
-        
-        /*
-         * Call the showPeople Methods,this methods display value in the varaible
-         */
-        $this->showPeople($Me);
+        $productA = clone $this->ConcretePrototypeA;
+        $this->showProduct($productA);
         
         /**
-         * Clone the class ConcretePrototypeB in an variable $You
+         * 
+         * @var Ambiguous $productB
          */
-        $You = clone $this->ConcretePrototypeB;
-        
-        /*
-         * Call the setPepole methods
-         */
-        $this->setPeople($You, "YourName", "01", "2000", "YourPlaceOfBirht");
-        
-        /*
-         * Call the showPeople Methods,this methods display value in the varaible
-         */
-        $this->showPeople($You);
+        $productB = clone $this->ConcretePrototypeB;
+        $this->showProduct($productB);
     }
     
-    /**
-     * New instance of ConcretePrototypeA and ConcretePrototypeB class
-     * and instancied in the variable withe the same name
-     */
-    private function makePeople()
+    private function makeProduct()
     {
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\Prototype\Client $ConcretePrototypeA
+         * @var \DesignPattern\CreationalPatterns\Prototype\ClientPrototype $ConcretePrototypeA
          */
         $this->ConcretePrototypeA = new ConcretePrototypeA();
         
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\Prototype\Client $ConcretePrototypeB
+         * @var \DesignPattern\CreationalPatterns\Prototype\ClientPrototype $ConcretePrototypeB
          */
         $this->ConcretePrototypeB = new ConcretePrototypeB();
     }
-    
-    /**
-     * Add property at the people variable, use the variable of the AbstractPrototype Class
-     * @param AbstractPrototype $people
-     * @param unknown $name
-     * @param unknown $id
-     * @param unknown $dateOfBirth
-     * @param unknown $placeOfbirth
-     */
-    private function setPeople(
-        AbstractPrototype $people,
-        $name,
-        $id,
-        $dateOfBirth,
-        $placeOfbirth)
-    {
-        $people->setName($name);
-        $people->setId($id);
-        $people->setDateOfBirth($dateOfBirth);
-        $people->setPlaceOfBirth($placeOfbirth);
-    }
-    
 
     /**
      * 
-     * @param AbstractPrototype $people
+     * @param AbstractPrototype $prototype
      */
-    private function showPeople(AbstractPrototype $people)
+    private function showProduct(AbstractPrototype $prototype)
     {
-        echo "Name : " . $people->getName() . "<br/>" ;
-        echo "ID : " . $people->getId() . "<br/>" ;
-        echo "Date of birth : " . $people->getDateOfBirth() . "<br/>" ;
-        echo "Place of birth : " . $people->getPlaceOfBirth(). "<br/>" ;
-        echo "<br/>";
-    }  
+        echo "<pre>";
+        echo "Show product : " . "<br/>";
+        echo "Product : " . $prototype->getProduct();
+        echo "</pre>";
+    }
 }

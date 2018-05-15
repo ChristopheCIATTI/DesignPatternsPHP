@@ -1,10 +1,5 @@
 <?php
 
-/*
- * This is a other ConcretrePrototype
- * You can use many 
- */
-
 namespace DesignPattern\CreationalPatterns\Prototype;
 
 /**
@@ -14,35 +9,44 @@ namespace DesignPattern\CreationalPatterns\Prototype;
  */
 class ConcretePrototypeB extends AbstractPrototype
 {
-    //Use the prototype variable  
     /**
      * 
-     * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::setPlaceOfBirth()
+     * @var unknown
      */
-    public function setPlaceOfBirth($placeOfbirth)
+    private $_product;
+    
+    public function __construct()
     {
         /**
          * 
+         * @var \DesignPattern\CreationalPatterns\Prototype\ConcretePrototypeB $_product
          */
-        $this->placeOfbirth = $placeOfbirth;
+        $this->_product = "Product B";
     }
     
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::getPlaceOfBirth()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::getProduct()
      */
-    public function getPlaceOfBirth()
+    public function getProduct()
     {
-        return $this->placeOfbirth;
-    } 
-    
+        return $this->_product;
+    }
+
     /**
      * 
      * {@inheritDoc}
      * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::__clone()
      */
-    function __clone()
-    {} 
+    public function __clone()
+    {
+        /**
+         * 
+         * @var \DesignPattern\CreationalPatterns\Prototype\ConcretePrototypeB $_product
+         */
+        $this->_product = $this->_product . " is cloned";
+    }
+
+    
 }

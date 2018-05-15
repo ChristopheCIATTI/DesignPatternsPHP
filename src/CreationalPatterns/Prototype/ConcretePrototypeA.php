@@ -1,12 +1,5 @@
 <?php
 
-/*
- * This is the concrte prototype,
- * This class use the AbstractProtorype,
- * You can see, all abstract method delcared in AbstractPrototype,
- * is here with params ect...
- */
-
 namespace DesignPattern\CreationalPatterns\Prototype;
 
 /**
@@ -15,35 +8,32 @@ namespace DesignPattern\CreationalPatterns\Prototype;
  *
  */
 class ConcretePrototypeA extends AbstractPrototype
-{
-    /*
-     * Here I calls the abstract methods in the AbstractPrototypeClass
-     */
-    
+{   
     /**
      * 
-     * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::setPlaceOfBirth()
+     * @var unknown
      */
-    public function setPlaceOfBirth($placeOfBirth)
+    private $_product;
+    
+    public function __construct()
     {
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\Prototype\ConcretePrototypeA $placeOfBirth
+         * @var \DesignPattern\CreationalPatterns\Prototype\ConcretePrototypeA $_product
          */
-        $this->placeOfBirth = $placeOfBirth;
+        $this->_product = "Product A";
     }
-    
+
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::getPlaceOfBirth()
+     * @see \DesignPattern\CreationalPatterns\Prototype\AbstractPrototype::getProduct()
      */
-    public function getPlaceOfBirth()
+    public function getProduct()
     {
-        return $this->placeOfBirth;
+        return $this->_product;
     }
-    
+
     /**
      * 
      * {@inheritDoc}
@@ -51,6 +41,12 @@ class ConcretePrototypeA extends AbstractPrototype
      */
     public function __clone()
     {
-        
+        /**
+         * 
+         * @var \DesignPattern\CreationalPatterns\Prototype\ConcretePrototypeA $_product
+         */
+        $this->_product = $this->_product . " is cloned";
     }
+
+    
 }
