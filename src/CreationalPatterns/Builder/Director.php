@@ -2,9 +2,9 @@
 
 /*
  * Director class.
- * 
- * constructs an object using the InterfaceBuilder
- * and return the product
+ *
+ * constructs an object using the AbstractBuilder
+ * and return the object/product
  */
 namespace DesignPattern\CreationalPatterns\Builder;
 
@@ -13,29 +13,35 @@ namespace DesignPattern\CreationalPatterns\Builder;
  * @author Christophe
  *
  */
-class Director extends AbstractDirector
+class Director
 {
     /**
      * 
-     * @param InterfaceBuilder $builder
-     * @return AbstractProduct
+     * @var unknown
      */
+    private $_builder;
     
-    private $builder;
-    
+    /**
+     * 
+     * @param AbstractBuilder $builder
+     */
     public function __construct(AbstractBuilder $builder)
     {
-        $this->builder = $builder;
+        /**
+         * 
+         * @var \DesignPattern\CreationalPatterns\Builder\Director $_builder
+         */
+        $this->_builder = $builder;
+        $builder->buildPartA();
+        $builder->buildPartB();
     }
     
-    public function build()
+    /**
+     * 
+     * @return unknown
+     */
+    public function getProduct()
     {
-        $this->builder->addSubProductA();
-        $this->builder->addSubProductB();
-    }
-    
-    public function getProduct() : AbstractProduct
-    {
-        return $this->builder->getProduct();
+        return $this->_builder->getProduct();
     }
 }

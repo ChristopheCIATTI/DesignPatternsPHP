@@ -1,75 +1,56 @@
 <?php
 
-/*
- * ConcreteBuilder
- * Here is the ConcreteBuilder (model) A
- * For the example A
- * 
- * 
- * constructs and assembles parts of the product by implementing the InterfaceBuilder.
- * defines and keeps track of the representation it creates.
- * provides an interface for retrieving the product.
- */
-
 namespace DesignPattern\CreationalPatterns\Builder;
-
-use DesignPattern;
 
 /**
  * 
  * @author Christophe
  *
  */
-class ConcreteBuilder extends AbstractBuilder {
-   
+class ConcreteBuilder extends AbstractBuilder
+{
     /**
      * 
      * @var unknown
      */
-    private $product;
+    private $_product;
     
-    
-    function __construct()
+    public function __construct()
     {
         /**
-         *
-         * @var \DesignPattern\CreationalPatterns\Builder\ConcreteBuilder $product
+         * 
+         * @var \DesignPattern\CreationalPatterns\Builder\ConcreteBuilder $_product
          */
-        $this->product = new Product();
-        var_dump($this->product);
-    }
-    
-    
-    
-    
-    /**
-     * 
-     * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Builder\InterfaceBuilder::addSubProductA()
-     */
-    public function addSubProductA()
-    {
-        $this->product->setPart("Here this the subProduct A", new SubProductA());
+        $this->_product = new Product();
     }
     
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Builder\InterfaceBuilder::addSubProductB()
+     * @see \DesignPattern\CreationalPatterns\Builder\AbstractBuilder::buildPartA()
      */
-    public function addSubProductB()
+    public function buildPartA()
     {
-        $this->product->setPart("Here this the subProduct B", new SubProductB());
+        $this->_product->addPart("Part A");
     }
     
     /**
      * 
      * {@inheritDoc}
-     * @see \DesignPattern\CreationalPatterns\Builder\InterfaceBuilder::getProduct()
+     * @see \DesignPattern\CreationalPatterns\Builder\AbstractBuilder::buildPartB()
      */
-    public function getProduct(): AbstractProduct
+    public function buildPartB()
     {
-        return $this->product;
+        $this->_product->addPart("Part B");
     }
-
+    
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \DesignPattern\CreationalPatterns\Builder\AbstractBuilder::getProduct()
+     */
+    public function getProduct()
+    {
+        return $this->_product;
+    }
 }

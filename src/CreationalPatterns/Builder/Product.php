@@ -1,14 +1,5 @@
 <?php
 
-/*
- * Product
- * 
- * for the complete example is ProductA
- * 
- * Here is describe the product
- * 
- */
-
 namespace DesignPattern\CreationalPatterns\Builder;
 
 /**
@@ -16,25 +7,36 @@ namespace DesignPattern\CreationalPatterns\Builder;
  * @author Christophe
  *
  */
-class Product extends AbstractProduct
+class Product
 {
-    private $product;
-    
-    private $name;
-    private $id;
+    /**
+     * 
+     * @var unknown
+     */
+    private $_parts;
     
     public function __construct()
     {
-        
+        /**
+         * 
+         * @var \DesignPattern\CreationalPatterns\Builder\Product $_parts
+         */
+        $this->_parts = array(); 
     }
     
-    public function setName($name)
+    /**
+     * 
+     * @param unknown $part
+     * @return number
+     */
+    public function addPart($part)
     {
-        $this->name = $name;
+        return array_push($this->_parts, $part . "\n");
     }
     
-    public function setId()
+    public function showProduct()
     {
-        $this->id = $id;
+        printf("The product consists of : \n");
+        array_map("printf", $this->_parts);
     }
 }

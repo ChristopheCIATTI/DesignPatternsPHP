@@ -1,11 +1,5 @@
 <?php
 
-/*
- * Interface builder 
- * 
- * specifies an abstract interface for creating parts of a Product object.
- */
-
 namespace DesignPattern\CreationalPatterns\Builder;
 
 /**
@@ -15,6 +9,8 @@ namespace DesignPattern\CreationalPatterns\Builder;
  */
 abstract class AbstractBuilder
 {
-    abstract function __construct();
-    abstract function getProduct();
+    abstract public function __construct();
+    abstract public function buildPartA();
+    abstract public function buildPartB();
+    abstract public function getProduct();
 }
