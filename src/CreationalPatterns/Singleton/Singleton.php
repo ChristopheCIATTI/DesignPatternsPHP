@@ -17,7 +17,7 @@ class Singleton
    * @access private
    * @static
    */
-   private static $_instance;
+   private static $_instance = null;
    
    /**
     * Method who create only instacne class
