@@ -18,31 +18,39 @@ class ClientFactoryMethod
      * 
      * @var unknown
      */
-    private $ConcreteCreatorA;
-    /**
-     * 
-     * @var unknown
-     */
-    private $ConcreteCreatorB;
+    private $ConcreteCreator;
     
     public function __construct()
     {
+        self::makeProduct(new ConcreteCreatorA());
+        self::makeProduct(new ConcreteCreatorB());
+    }
+    
+    /**
+     * 
+     * @param AbstractCreator $creator
+     */
+    private function makeProduct(AbstractCreator $creator)
+    {
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\FactoryMethod\ClientFactoryMethod $ConcreteCreatorA
+         * @var \DesignPattern\CreationalPatterns\FactoryMethod\ClientFactoryMethod $ConcreteCreator
          */
-        $this->ConcreteCreatorA = new ConcreteCreatorA();
-        $this->ConcreteCreatorA->factoryMethod();
+        $this->ConcreteCreator = $creator->factoryMethod();
         
-        var_dump($this->ConcreteCreatorA->factoryMethod());
-        
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\FactoryMethod\ClientFactoryMethod $ConcreteCreatorB
-         */
-        $this->ConcreteCreatorB = new ConcreteCreatorB();
-        $this->ConcreteCreatorB->factoryMethod();
-        
-        var_dump($this->ConcreteCreatorB->factoryMethod());
+        $this->showProduct($this->ConcreteCreator->getProduct());
+
+    }
+    
+    /**
+     * 
+     * @param unknown $product
+     */
+    private function showProduct($product)
+    {
+        echo "<pre>";
+        echo "show product" . "<br/>";
+        echo "product name : " . $product . "<br/>";
+        echo "</pre>";
     }
 }

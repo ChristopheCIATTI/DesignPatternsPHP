@@ -17,7 +17,7 @@ class ConcreteProductB extends AbstractProduct
      * 
      * @var unknown
      */
-    private $product;
+    private $_product;
     
     public function __construct()
     {
@@ -25,7 +25,7 @@ class ConcreteProductB extends AbstractProduct
          * 
          * @var \DesignPattern\CreationalPatterns\FactoryMethod\ConcreteProductB $product
          */
-        $this->product = "Concrete Product B";
+        $this->_product = "Concrete Product B";
     }
     
     /**
@@ -35,6 +35,6 @@ class ConcreteProductB extends AbstractProduct
      */
     public function getProduct()
     {
-        return $this->product;
+        return $this->_product;
     }
 }

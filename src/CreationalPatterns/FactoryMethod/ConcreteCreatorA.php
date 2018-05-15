@@ -20,11 +20,6 @@ class ConcreteCreatorA extends AbstractCreator
      */
     public function factoryMethod()
     {
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\FactoryMethod\ConcreteCreatorA $product
-         */
-        $this->product = new ConcreteProductA();
-        return $this->product;
+        return new ConcreteProductA();
     }
 }
