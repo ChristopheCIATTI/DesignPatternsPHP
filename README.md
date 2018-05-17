@@ -5,11 +5,17 @@ with explanation.
 
 ## What is in it ?
 
+**Creational Patterns**
 - *Abstract Factory pattern*
 - *Builder pattern*
 - *Factory Method pattern*
 - *Prototype pattern*
 - *Singleton pattern*
+
+**Structural patterns**
+- *Adapter pattern*
+- *Bridge pattern*
+- *Composite pattern*
 
 ## Avancement :
 This pattern is only minimal version.
