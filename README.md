@@ -29,3 +29,7 @@ __GOF Design patterns__
 __William Sanders PHP Design patterns__
 
 
+### Licence MIT
+### Christophe CIATTI
+
+
