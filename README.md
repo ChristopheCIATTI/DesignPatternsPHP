@@ -16,6 +16,7 @@ with explanation.
 - *Adapter pattern*
 - *Bridge pattern*
 - *Composite pattern*
+- *Decorator pattern*
 
 ## Avancement :
 This pattern is only minimal version.
