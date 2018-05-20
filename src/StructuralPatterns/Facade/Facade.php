@@ -27,6 +27,8 @@ class Facade
      */
     private $_subSystemC;
     
+    private $_facade;
+    
     public function __construct()
     {
         /**
@@ -46,24 +48,23 @@ class Facade
          * @var \DesignPattern\StructuralPatterns\Facade\Facade $_subSystemC
          */
         $this->_subSystemC = new SubSystemC();
-    }
-    
-    public function operate()
-    {
-       $this->showSubSystem($this->_subSystemA->operate());
-       $this->showSubSystem($this->_subSystemB->operate());
-       $this->showSubSystem($this->_subSystemC->operate());
+        
+        /**
+         * 
+         * @var \DesignPattern\StructuralPatterns\Facade\Facade $_facade
+         */
+        $this->_facade = [];
     }
     
     /**
      * 
-     * @param unknown $subSystem
+     * @return unknown
      */
-    private function showSubSystem($subSystem)
+    public function operate()
     {
-        echo "<pre>";
-        echo "show SubSystem" . "<br/>";
-        echo "SubSystem : " . $subSystem . "<br/>";
-        echo "</pre>";
-    }   
+        $this->_facade[] = $this->_subSystemA->operate();
+        $this->_facade[] = $this->_subSystemB->operate();
+        $this->_facade[] = $this->_subSystemC->operate();     
+        return $this->_facade;
+    }
 }
