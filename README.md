@@ -17,6 +17,7 @@ with explanation.
 - *Bridge pattern*
 - *Composite pattern*
 - *Decorator pattern*
+- *Facade pattern*
 
 ## Avancement :
 This pattern is only minimal version.
