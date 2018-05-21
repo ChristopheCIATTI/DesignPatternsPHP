@@ -18,6 +18,7 @@ with explanation.
 - *Composite pattern*
 - *Decorator pattern*
 - *Facade pattern*
+- *Flyweight pattern*
 
 ## Avancement :
 This pattern is only minimal version.
