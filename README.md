@@ -19,6 +19,9 @@ with explanation.
 - *Decorator pattern*
 - *Facade pattern*
 - *Flyweight pattern*
+- *Proxy pattern*
+
+**Behavorial patterns**
 
 ## Avancement :
 This pattern is only minimal version.
