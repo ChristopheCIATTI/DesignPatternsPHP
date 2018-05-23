@@ -27,7 +27,7 @@ class ProductBb extends AbstractProductB
          * 
          * @var \DesignPattern\CreationalPatterns\AbstractFactory\ProductBb $product
          */
-        $this->product= "Product Bb";
+        $this->_product= "Product Bb";
     }
     
     /**
@@ -37,7 +37,7 @@ class ProductBb extends AbstractProductB
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->_product;
     }
     
     
