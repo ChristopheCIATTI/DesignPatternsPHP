@@ -22,6 +22,7 @@ with explanation.
 - *Proxy pattern*
 
 **Behavorial patterns**
+- *Chain of responsibility pattern*
 
 ## Avancement :
 This pattern is only minimal version.
