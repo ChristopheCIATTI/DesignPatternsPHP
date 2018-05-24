@@ -12,8 +12,8 @@ class ClientCommand
     /**
      * 
      * @var unknown
-     */
-    private $_concreteCommand;
+     */   
+    private$_receiver;
     
     public function __construct()
     {
@@ -24,10 +24,11 @@ class ClientCommand
     {
         /**
          * 
-         * @var \DesignPattern\BehavioralPatterns\Command\ClientCommand $_concreteCommand
+         * @var \DesignPattern\BehavioralPatterns\Command\ClientCommand $_receiver
          */
-        $this->_concreteCommand = new ConcreteCommand(new Receiver());
-        $this->showReceiver($this->_concreteCommand->execute());
+        $this->_receiver = new Receiver();
+        $this->showReceiver($this->_receiver->action());
+        
     }
     
     /**
