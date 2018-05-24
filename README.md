@@ -23,6 +23,7 @@ with explanation.
 
 **Behavorial patterns**
 - *Chain of responsibility pattern*
+- *Command pattern*
 
 ## Avancement :
 This pattern is only minimal version.
