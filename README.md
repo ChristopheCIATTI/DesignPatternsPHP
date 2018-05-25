@@ -8,6 +8,8 @@ Provider the design patterns,
 
 _coding very simply, near of skeleton but just my pattern is a minimal runable version_
 
+You can find the uml diagram and file test more later
+
 ## What is in it ?
 
 **Creational Patterns**
@@ -31,9 +33,6 @@ _coding very simply, near of skeleton but just my pattern is a minimal runable v
 - *Command pattern*
 - *Interpreter pattern*
 
-## Avancement :
-This pattern is only minimal version.
-I upload the patterns, documentations and uml diagram more later
 
 ## source :
 I take my source with two books :
