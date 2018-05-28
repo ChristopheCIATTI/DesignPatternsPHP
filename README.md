@@ -32,6 +32,7 @@ You can find the uml diagram and file test more later
 - *Chain of responsibility pattern*
 - *Command pattern*
 - *Interpreter pattern*
+- *Iterator pattern*
 
 
 ## source :
