@@ -40,8 +40,6 @@ I take my source with two books :
 
 __GOF Design patterns__ 
 
-__William Sanders PHP Design patterns__
-
 
 ### Licence MIT
 ### Christophe CIATTI
