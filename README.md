@@ -33,6 +33,7 @@ You can find the uml diagram and file test more later
 - *Command pattern*
 - *Interpreter pattern*
 - *Iterator pattern*
+- *Mediator pattern*
 
 
 ## source :
