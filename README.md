@@ -37,7 +37,7 @@ You can find the uml diagram and file test more later
 
 
 ## source :
-I take my source with two books :
+I take my source with this book :
 
 __GOF Design patterns__ 
 
