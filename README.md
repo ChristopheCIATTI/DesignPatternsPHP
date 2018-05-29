@@ -34,6 +34,7 @@ You can find the uml diagram and file test more later
 - *Interpreter pattern*
 - *Iterator pattern*
 - *Mediator pattern*
+- *Memento pattern*
 
 
 ## source :
