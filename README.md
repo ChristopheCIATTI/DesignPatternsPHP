@@ -35,7 +35,7 @@ You can find the uml diagram and file test more later
 - *Iterator pattern*
 - *Mediator pattern*
 - *Memento pattern*
-- *Template method pattern
+- *Template method pattern*
 
 
 ## source :
