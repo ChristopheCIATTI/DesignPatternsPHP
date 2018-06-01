@@ -44,7 +44,9 @@ I take my source with this book :
 __GOF Design patterns__ 
 
 
-### Licence MIT
-### Christophe CIATTI
+
+__Licence MIT__
+#### Christophe CIATTI
+
 
 
