@@ -3,7 +3,7 @@
 /*
  * declares an abstract class for a type of product object.
  * 
- *  Here is the exampe A
+ *  The product is desccribe here
  */
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;
@@ -15,6 +15,6 @@ namespace DesignPattern\CreationalPatterns\AbstractFactory;
  */
 abstract class AbstractProductA
 {
-    abstract function __construct();
-    abstract function getProduct() : string ;
+    abstract public function __construct();
+    abstract public function getProduct() : string ;
 }

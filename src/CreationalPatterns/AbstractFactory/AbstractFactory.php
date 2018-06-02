@@ -1,7 +1,7 @@
 <?php
 
 /*
- * AbstractFactory declares an abstract class for operations that create abstract product objects. 
+ * AbstractFactory create Factory 
  */
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;
@@ -13,6 +13,10 @@ namespace DesignPattern\CreationalPatterns\AbstractFactory;
  */
 abstract class AbstractFactory
 {
+    /*
+     * Methof of fabirque 
+     */
+    
     abstract public function createProductA();
     abstract public function createProductB();
 }

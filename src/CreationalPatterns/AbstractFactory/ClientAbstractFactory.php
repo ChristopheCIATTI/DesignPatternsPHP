@@ -13,16 +13,23 @@ class ClientAbstractFactory
      * 
      * @var unknown
      */
-    private $ConcreteProductA;
+    private $_ConcreteProductA;
     /**
      * 
      * @var unknown
      */
-    private $ConcreteProductB;
+    private $_ConcreteProductB;
     
     public function __construct()
     {
+        /*
+         * Concrete factory A, for the A family product
+         */
         self::makeProduct(new ConcreteFactoryA());
+        
+        /*
+         * Concrete factory B, for the B family product
+         */
         self::makeProduct(new ConcreteFactoryB());
      }
      
@@ -32,32 +39,36 @@ class ClientAbstractFactory
       */
     private function makeProduct(AbstractFactory $factory)
     {
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\AbstractFactory\ClientAbstractFactory $ConcreteProductA
+        /*
+         * Here the product is created
          */
-        $this->ConcreteProductA = $factory->createProductA();
         
         /**
          * 
-         * @var Ambiguous $ConcreteProductB
+         * @var \DesignPattern\CreationalPatterns\AbstractFactory\ClientAbstractFactory $_ConcreteProductA
          */
-        $this->ConcreteProductB = $factory->createProductB();
+        $this->_ConcreteProductA = $factory->createProductA();
         
-        $this->showProduct( $this->ConcreteProductA->getProduct(), $this->ConcreteProductB->getProduct());
+        /**
+         * 
+         * @var Ambiguous $_ConcreteProductB
+         */
+        $this->_ConcreteProductB = $factory->createProductB();
+        
+        $this->showProduct( $this->_ConcreteProductA->getProduct(), $this->_ConcreteProductB->getProduct());
     }
     
     /**
-     * 
-     * @param unknown $ConcreteProductA
-     * @param unknown $ConcreteProductB
+     * show product, this method display the product
+     * @param unknown $_ConcreteProductA
+     * @param unknown $_ConcreteProductB
      */
-    private function showProduct($ConcreteProductA, $ConcreteProductB)
+    private function showProduct($_ConcreteProductA, $_ConcreteProductB)
     {
         echo "<pre>";
         echo "show product" . "<br/>";
-        echo "product name : " . $ConcreteProductA . "<br/>";
-        echo "product name : " . $ConcreteProductB . "<br/>";
+        echo "product name : " . $_ConcreteProductA . "<br/>";
+        echo "product name : " . $_ConcreteProductB . "<br/>";
         echo "</pre>";
     }
     

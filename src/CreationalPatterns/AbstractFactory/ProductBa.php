@@ -4,6 +4,7 @@
  * Product or ConcreteProduct
  *
  * defines a product object to be created by the corresponding concrete factory.
+ * Concrete Product
  */
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;

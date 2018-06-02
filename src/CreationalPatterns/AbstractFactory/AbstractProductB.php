@@ -3,7 +3,7 @@
 /*
  * declares an abstract class for a type of product object.
  * 
- *  Here is the exampe A
+ *  The product is desccribe here
  */
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;

@@ -4,6 +4,7 @@
  * Product or ConcreteProduct
  *
  * defines a product object to be created by the corresponding concrete factory.
+ * Concrete Product
  */
 
 namespace DesignPattern\CreationalPatterns\AbstractFactory;
@@ -27,7 +28,7 @@ class ProductBb extends AbstractProductB
          * 
          * @var \DesignPattern\CreationalPatterns\AbstractFactory\ProductBb $product
          */
-        $this->_product= "Product Bb";
+        $this->product= "Product Bb";
     }
     
     /**
@@ -37,7 +38,7 @@ class ProductBb extends AbstractProductB
      */
     public function getProduct() : string
     {
-        return $this->_product;
+        return $this->product;
     }
     
     

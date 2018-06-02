@@ -6,6 +6,7 @@ namespace DesignPattern\CreationalPatterns\AbstractFactory;
  * 
  * @author Christophe
  *
+ *CroncreteFacotry create the product
  */
 class ConcreteFactoryB extends AbstractFactory
 {
@@ -16,7 +17,7 @@ class ConcreteFactoryB extends AbstractFactory
      */
     public function createProductA()
     {
-        return new ProductBa();
+        return new ProductAb();
     }
     
     /**
