@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Client class, here the pattern is used
+ */
+
 namespace DesignPattern\CreationalPatterns\Builder;
 
 /**
@@ -13,13 +17,25 @@ class ClientBuilder
      * 
      * @var unknown
      */
-    private $_builder;
+    private $_builderA;
     
     /**
      * 
      * @var unknown
      */
-    private $_director;
+    private $_builderB;
+    
+    /**
+     * 
+     * @var unknown
+     */
+    private $_directorA;
+    
+    /**
+     * 
+     * @var unknown
+     */
+    private $_directorB;
     
     /**
      * 
@@ -31,21 +47,25 @@ class ClientBuilder
     {
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\Builder\ClientBuilder $_builder
+         * @var \DesignPattern\CreationalPatterns\Builder\ClientBuilder $_builderA
          */
-        $this->_builder = new ConcreteBuilder();
+        $this->_builderA = new ConcreteBuilderA();
+        $this->_builderB = new ConcreteBuilderB();
         
         /**
          * 
          * @var \DesignPattern\CreationalPatterns\Builder\ClientBuilder $_director
          */
-        $this->_director = new Director($this->_builder);
+        $this->_directorA = new Director($this->_builderA);
+        $this->_directorB = new Director($this->_builderB);
         
         /**
          * 
          * @var \DesignPattern\CreationalPatterns\Builder\ClientBuilder $_product
          */
-        $this->_product = $this->_director->getProduct();
+        $this->_product = $this->_directorA->getProduct();
+        $this->showProduct();
+        $this->_product = $this->_directorB->getProduct();
         $this->showProduct();
         
     }
