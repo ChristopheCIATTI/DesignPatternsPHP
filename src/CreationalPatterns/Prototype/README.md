@@ -1,13 +1,16 @@
-# Prototype Pattern
+# Prototype Method pattern 
 
-### What is
-
-This pattern is a creationnal pattern 
-this pattern clone objects instead of creating many, this also includes copying an object
+## What is ?
+Prototype pattern clone the object, to modifate him, au lieu d'en creer un nouveau
 
 
-### In which case to use it ?
+## In which case to use it ?
+When you have a big object
 
-When you have to copy or creating a big object, this pattern offers better perfomance in this case.
+## Participants :
 
+### clientPrototype   : The prototype pattern is run here. To use you instanced the object and clone him to use
 
+### AbstractPrototype : This class describe the prototype
+
+### ConretePrototype  :

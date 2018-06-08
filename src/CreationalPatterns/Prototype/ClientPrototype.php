@@ -13,45 +13,28 @@ class ClientPrototype
      * 
      * @var unknown
      */
-    private $ConcretePrototypeA;
+    private $ConcretePrototype;
+
+    public function __construct()
+    {
+        self::makeProduct(new ConcretePrototypeA());
+        $this->showProduct($this->ConcretePrototype);
+        
+        self::makeProduct(new ConcretePrototypeB());
+        $this->showProduct($this->ConcretePrototype);
+    }
     
     /**
      * 
-     * @var unknown
+     * @param AbstractPrototype $prototype
      */
-    private $ConcretePrototypeB;
-    
-    public function __construct()
-    {
-        $this->makeProduct();
-        /**
-         * 
-         * @var Ambiguous $productA
-         */
-        $productA = clone $this->ConcretePrototypeA;
-        $this->showProduct($productA);
-        
-        /**
-         * 
-         * @var Ambiguous $productB
-         */
-        $productB = clone $this->ConcretePrototypeB;
-        $this->showProduct($productB);
-    }
-    
-    private function makeProduct()
+    private function makeProduct(AbstractPrototype $prototype)
     {
         /**
          * 
-         * @var \DesignPattern\CreationalPatterns\Prototype\ClientPrototype $ConcretePrototypeA
+         * @var \DesignPattern\CreationalPatterns\Prototype\ClientPrototype $ConcretePrototype
          */
-        $this->ConcretePrototypeA = new ConcretePrototypeA();
-        
-        /**
-         * 
-         * @var \DesignPattern\CreationalPatterns\Prototype\ClientPrototype $ConcretePrototypeB
-         */
-        $this->ConcretePrototypeB = new ConcretePrototypeB();
+        $this->ConcretePrototype = clone $prototype;
     }
 
     /**
